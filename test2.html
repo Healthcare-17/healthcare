@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Website</title>
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Body Styles */
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #0077b6;
+            padding: 10px 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero .btn {
+            background-color: #023e8a;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        /* Services Section */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f1f1f1;
+        }
+        .services h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-card i {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* Appointment Form Section */
+        .appointment {
+            background-color: #0077b6;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .appointment h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .appointment form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .appointment input, .appointment textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .appointment button {
+            padding: 10px 20px;
+            background-color: #023e8a;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .contact .social-links a {
+            color: #0077b6;
+            margin: 0 10px;
+            font-size: 30px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Healthcare+</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#appointment">Appointment</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Health, Our Priority</h1>
+            <p>Expert healthcare services for a healthier you.</p>
+            <a href="#appointment" class="btn">Book an Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <i class="fas fa-stethoscope"></i>
+                <h3>General Checkup</h3>
+                <p>Regular checkups to keep your health on track.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-baby"></i>
+                <h3>Pediatrics</h3>
+                <p>Specialized care for your little ones.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-ambulance"></i>
+                <h3>Emergency Care</h3>
+                <p>24/7 emergency services for critical situations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment">
+        <h2>Book an Appointment</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <textarea name="message" placeholder="Reason for Appointment" rows="4"></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@healthcareplus.com | Phone: +123 456 7890</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Healthcare+. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+    </script>
+    <script>
+        // Simple login function (for demo purposes only)
+        function loginUser() {
+            // Get user credentials
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            // For demo, check if the credentials are non-empty
+            if (email && password) {
+                alert("Login Successful!");
+                // Display the medical history section after login
+                document.getElementById("medical-history").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            } else {
+                alert("Please enter both email and password!");
+            }
+        }
+    </script>
+</body>
+</html>
